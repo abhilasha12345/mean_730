@@ -54,7 +54,8 @@ router.get('/addcat', function(req, res, next) {
 router.post('/addcat', function(req, res, next) {
   var catnm=req.body.catnm
   var caticon=req.files.caticon
-  var caticonnm=Date()+"-"+caticon.name
+  //var caticonnm=Date()+"-"+caticon.name
+  var caticonnm=Math.floor(Math.random() * 1000)+"-"+caticon.name
   var caticonpath=path.join(__dirname,"../public/uploads",caticonnm)
   caticon.mv(caticonpath)
   adminModel.addcat(catnm,caticonnm).then((result)=>{

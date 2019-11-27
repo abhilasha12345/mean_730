@@ -22,7 +22,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(fileupload())
-app.use(session({'secret':'my pet name is shanky'}))
+app.use(session({'secret':'my pet name is shanky',
+				 resave: true,
+				 saveUninitialized: true
+				 }))
 
 app.use('/admin', adminRouter);
 app.use('/user', usersRouter);
