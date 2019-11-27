@@ -1,0 +1,99 @@
+<% include header %>
+	
+<% include nav %>
+
+<% include slider %>
+<div id="page">
+		
+		
+		<div id="content">
+			<div class="box">
+<h1>Filter Products:</h1>			
+<table style="border:2px solid black;"cellspacing="10" height="100" width="600">
+<tr>
+<td>
+<form method="get" action="/showproducts">
+<b>Filter By Price:</b> 
+<input type="hidden" name="scnm" value="<%= scnm %>"/>
+<input type="text" style="width:160px;" name="sprice" placeholder="Enter starting price" />
+-
+<input type="text" style="width:160px;" name="eprice" placeholder="Enter ending price" />
+<input type="submit" value="Filter" />
+</form>
+</td>
+</tr>
+<tr><td><hr></td></tr>
+<tr>
+<td>
+<form method="get" action="/showproducts">
+<input type="hidden" name="scnm" value="<%= scnm %>"/>
+<b>Filter By City:</b> 
+<select name="city">
+<option>Select city</option>
+<option>Indore</option>
+<option>Bhopal</option>
+<option>Ujjain</option>
+</select>
+
+<input type="submit" value="Filter" />
+</form>
+</td>
+</tr>
+</table>			
+<br>			
+				<h2>Product List >> <%= scnm %></h2>
+				<b>Total Products : <%= plist.length %></b>
+
+<% for(i in plist) { %>
+<br><br>				
+<table style="border:3px solid #209D9D;border-radius:20px;" height="150" width="600"> 
+<tr>
+<td width="35%" rowspan="3">
+<center>
+<img src="uploads/<%= plist[i].f1 %>" height="100" width="150"/>
+</center>
+</td>
+<td><b>Title : <%= plist[i].title %></b></td>
+</tr>
+<tr>
+<td><b>Description : <%= plist[i].des %></b></td>
+</tr>
+<tr>
+<td><b>Price : <%= plist[i].price %></b>
+<br>
+<a href="/buylogin?pid=<%= plist[i].pid %>&price=<%= plist[i].price %>">Click to buy product....</a>
+</td>
+</tr>
+</table>
+				
+<% } %>				
+
+			</div>
+			<br class="clearfix" />
+		</div>
+		<!-- content ends -->
+
+
+		<div id="sidebar">
+			<div class="box">
+<h3>Category List</h3>
+<ul class="list">
+<% for(let i in clist) { %>
+<li><a href="/viewsubcat?cnm=<%= clist[i].catnm %>" ><%= clist[i].catnm %></a></li>
+<% }  %>
+</ul>
+</div>
+			
+		</div>
+		<!-- sidebar ends -->	
+
+
+		<br class="clearfix" />
+	</div>
+	<!-- page ends -->
+</div>
+<!-- wrapper ends -->
+
+<% include footer %>
+
+

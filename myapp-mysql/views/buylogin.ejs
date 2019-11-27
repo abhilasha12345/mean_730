@@ -1,0 +1,41 @@
+<% include header %>
+	
+<div id="page">
+		
+<center>		
+<h2>Login here to buy product!!!</h2>
+	
+<font color="orange"><%= output %></font>
+
+<form method='post' action='/buylogin'>
+<table  cellspacing='10'>
+	<tr>
+		<td>Username/EmailID</td>
+		<td><input type="text" name="email" placeholder="Enter EmailID" />
+		<input type="hidden" name="pid" value="<%= urlobj.pid %>" />
+		<input type="hidden" name="price" value="<%= urlobj.price %>" />
+		
+		</td>	
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td><input type="password" name="password" placeholder="Enter Password" /></td>	
+	</tr>
+	<tr>
+		<td><input type='submit' value='Login' /></td>	
+	</tr>
+</table>
+</form>	
+	
+	
+</center>
+
+		<br class="clearfix" />
+	</div>
+	<!-- page ends -->
+</div>
+<!-- wrapper ends -->
+
+<% include footer %>
+
+

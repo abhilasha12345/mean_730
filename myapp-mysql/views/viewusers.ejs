@@ -1,0 +1,64 @@
+<% include header %>
+	
+<% include adminnav %>
+
+<div id="page">
+<center>
+<h1>View And Manage Users Details</h1>		
+<br>
+<table cellspacing="10">
+<tr>
+	<th>RegID</th>
+	<th>Name</th>
+	<th>Email</th>
+	<th>Address</th>
+	<th>Mobile</th>
+	<th>City</th>
+	<th>Gender</th>
+	<th>Status</th>
+	<th>Action</th>
+</tr>
+<tr><td colspan="9"><hr></td></tr>
+<% for(let i in userDetails) { %>
+<tr>
+<td><%= userDetails[i].regid %></td>
+<td><%= userDetails[i].name %></td>
+<td><%= userDetails[i].email %></td>
+<td><%= userDetails[i].address %></td>
+<td><%= userDetails[i].mobile %></td>
+<td><%= userDetails[i].city %></td>
+<td><%= userDetails[i].gender %></td>
+<td>
+<% if(userDetails[i].status) { %>
+<a href="/admin/manageusers?s=block&regid=<%= userDetails[i].regid %>" title="Block Users">
+<img src="../images/block.png" height="70" width="100" />
+</a>
+<% } else { %>
+<a href="/admin/manageusers?s=unblock&regid=<%= userDetails[i].regid %>" title="Un-block Users">
+<img src="../images/unblock.png" height="70" width="100" />
+</a>
+<% } %>
+</td>
+<td>
+<a href="/admin/manageusers?s=delete&regid=<%= userDetails[i].regid %>" title="Delete Users">
+<img src="../images/delete.png" height="70" width="100" />
+</a>
+</td>
+</tr>
+<tr><td colspan="9"><hr></td></tr>
+<% } %>
+
+</table>
+</center>
+</div>
+<!-- page ends -->
+
+
+</div>
+<!-- wrapper ends -->
+
+
+
+<% include footer %>
+
+
