@@ -1,0 +1,50 @@
+<div id="page">
+		
+		
+		<div id="content">
+			<div class="post">
+<h2 class="title"><a href="#">Service Page</a></h2>
+<h3>{{cDate}}</h3>
+
+<h1>Post List</h1>
+<table border='2'>
+<tr>
+<th>UserID</th>
+<th>ID</th>
+<th>Title</th>
+<th>Body</th>
+</tr>
+
+<tr *ngFor="let p of pList">
+<td>{{p.userId}}</td>
+<td>{{p.id}}</td>
+<td>{{p.title}}</td>
+<td>{{p.body}}</td>
+</tr>
+
+</table>
+
+			
+			</div>
+		</div>
+		<!--content ends -->
+
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>Categories</h2>
+					<ul>
+						<li><a href="#">Latest News</a></li>
+						<li><a href="#">Latest Events</a></li>
+						<li><a href="#">New Categories</a></li>
+						<li><a href="#">Offers</a></li>
+						<li><a href="#">View Deals</a></li>
+					</ul>
+				</li>
+			
+			</ul>
+		</div>
+
+		<!--sidebar ends -->
+		
+	</div>

@@ -1,0 +1,86 @@
+<div id="page">
+		
+		
+		<div id="content">
+			<div class="post">
+<h2 class="title"><a href="#">About Page</a></h2>	
+
+<h2>IF-ELSE statement</h2>
+
+<div *ngIf="res;then true_content else false_content">here is ignored</div>    
+<ng-template #true_content>a is greater</ng-template>
+<ng-template #false_content>b is greater</ng-template>
+
+<h2>IF statement</h2>
+<div *ngIf="res"><h3>a is greater</h3></div>
+<div *ngIf="!res"><h3>b is greater</h3></div>
+
+
+<h2>Users Details</h2>
+
+<table border="3">
+<tr>
+<th>Employee number</th>
+<th>Employee name</th>
+<th>Employee salary</th>
+</tr>
+<tr *ngFor="let user of users">
+<td>{{user.eno}}</td>
+<td>{{user.enm}}</td>
+<td>{{user.esal}}</td>
+</tr>
+</table>
+
+
+<h2>employee details loop access</h2>
+
+<p *ngFor="let emp of emp_details | keyvalue" >
+{{emp.key}}---->{{emp.value}}
+</p>
+
+<h2>employee details manual access</h2>
+
+<p>Eno : {{emp_details.eno}}</p>
+<p>Enm : {{emp_details.enm}}</p>
+<p>Esal : {{emp_details.esal}}</p>
+
+<h2>marks details loop access</h2>
+
+<p *ngFor="let element of mks" >{{element}}</p>
+
+<h2>marks details manual access</h2>
+<p>marks 1 : {{mks[0]}}</p>
+<p>marks 2 : {{mks[1]}}</p>
+<p>marks 3 : {{mks[2]}}</p>
+<p>marks 4 : {{mks[3]}}</p>
+<p>marks 5 : {{mks[4]}}</p>
+
+<h2>Add</h2>
+<p>a = {{a}}</p>				
+<p>b = {{b}}</p>
+<p>add = {{c}}</p>								
+				
+			</div>
+			
+		</div>
+		<!--content ends -->
+
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>Categories</h2>
+					<ul>
+						<li><a href="#">Latest News</a></li>
+						<li><a href="#">Latest Events</a></li>
+						<li><a href="#">New Categories</a></li>
+						<li><a href="#">Offers</a></li>
+						<li><a href="#">View Deals</a></li>
+					</ul>
+				</li>
+			
+			</ul>
+		</div>
+
+		<!--sidebar ends -->
+		
+	</div>

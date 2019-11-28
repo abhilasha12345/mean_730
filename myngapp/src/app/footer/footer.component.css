@@ -1,0 +1,23 @@
+/* Footer */
+
+#footer {
+	width: 900px;
+	height: 140px;
+	margin: 0px auto;
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 30px;
+	line-height: normal;
+	text-transform: lowercase;
+	text-align: center;
+	font-family: 'Abel', sans-serif;
+	font-size: 18px;
+	color: #786562;
+}
+
+#footer a {
+	text-decoration: underline;
+	color: #786562;
+}

@@ -1,0 +1,106 @@
+h1 {
+	font-size: 2em;
+}
+
+
+h1, h2, h3 {
+	margin: 0px;
+	padding: 0px;
+	text-transform: lowercase;
+	font-family: 'Abel', sans-serif;
+	font-weight: 400;
+}
+
+
+/* Header */
+
+#header {
+	overflow: hidden;
+	width: 900px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	height: 60px;
+	margin: 0;
+	padding: 20px 0px 0px 0px;
+	color: #FFFFFF;
+}
+
+#logo h1, #logo p {
+	margin: 0;
+	padding: 0;
+}
+
+#logo h1 {
+	float: left;
+	padding-left: 30px;
+	letter-spacing: -3px;
+	text-transform: lowercase;
+	font-family: 'Abel', sans-serif;
+	font-size: 64px;
+}
+
+#logo span {
+	letter-spacing: normal;
+	font-size: 22px;
+}
+
+#logo a {
+	border: none;
+	background: none;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+
+/* Header */
+
+/*#header {
+	overflow: hidden;
+	width: 900px;
+	height: 100px;
+	margin: 0 auto;
+}*/
+
+/* Logo */
+
+/*#logo {
+	float: left;
+	height: 60px;
+	margin: 0;
+	padding: 20px 0px 0px 0px;
+	color: #FFFFFF;
+}
+
+#logo h1, #logo p {
+	margin: 0;
+	padding: 0;
+}
+
+#logo h1 {
+	float: left;
+	padding-left: 0px;
+	letter-spacing: -3px;
+	text-transform: lowercase;
+	font-family: 'Abel', sans-serif;
+	font-size: 64px;
+}
+
+#logo span {
+	letter-spacing: normal;
+    font-size: 22px;
+    margin-left:-100px; 
+}
+
+#logo a {
+	border: none;
+	background: none;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+*/
