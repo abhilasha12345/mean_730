@@ -1,0 +1,102 @@
+<% include header %>
+	
+<% include nav %>
+
+<% include slider %>
+
+
+<div id="page">
+		
+		
+<div id="content">
+<div class="box">
+
+<h2>Register here!!!!</h2>
+<font color="orange"><%= output %></font>
+
+<form method='post' action='/register'>
+<table  cellspacing='10'>
+	<tr>
+		<td>Name</td>
+		<td><input type="text" name="name" placeholder="Enter Name" /></td>	
+	</tr>
+	<tr>
+		<td>Username/EmailID </td>
+		<td><input type="text" name="email" placeholder="Enter EmailID" /></td>	
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td><input type="password" name="password" placeholder="Enter Password" /></td>	
+	</tr>
+	<tr>
+		<td>Mobile</td>
+		<td><input type='text' name='mobile' placeholder="Enter Mobile" /></td>	
+	</tr>
+	<tr>
+		<td>Address</td>
+		<td><textarea name='address' rows='5' cols='31' placeholder="Enter Address"></textarea></td>	
+	</tr>
+	<tr>
+		<td>City</td>
+		<td>
+		<select name='city' style="width:250px;">
+		<option>select city</option>
+		<optgroup label="Madhya Pradesh">
+		<option>Indore</option>
+		<option>Ujjain</option>
+		<option>Bhopal</option>
+		</optgroup>
+		<optgroup label="Maharastra">
+		<option>Mumbai</option>
+		<option>Pune</option>
+		<option>Nasik</option>
+		</optgroup>
+		</select>
+		</td>	
+	</tr>
+	<tr>
+		<td>Gender</td>
+		<td>
+		<input type='radio' name='gender' value='male' /> 		Male
+		
+		<input type='radio' name='gender' value='female' /> 			Female
+		
+		</td>	
+	</tr>
+	<tr>
+		<td><input type='submit' value='Register' /></td>	
+	</tr>
+</table>
+</form>
+
+				
+</div>
+<br class="clearfix" />
+</div>
+<!-- content ends -->
+
+
+		<div id="sidebar">
+			<div class="box">
+				<h3>Social Links</h3>
+				<ul class="list">
+					<li class="first"><a href="#">Facebook</a></li>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">LinkedIn</a></li>
+					<li class="last"><a href="#">Gmail</a></li>
+				</ul>
+			</div>
+			
+		</div>
+		<!-- sidebar ends -->	
+
+
+		<br class="clearfix" />
+	</div>
+	<!-- page ends -->
+</div>
+<!-- wrapper ends -->
+
+<% include footer %>
+
+

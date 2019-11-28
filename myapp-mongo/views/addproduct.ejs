@@ -1,0 +1,141 @@
+<% include header %>
+	
+<% include usernav %>
+
+<script>
+function fetchSubCat(c)
+{
+  var xhttp=new XMLHttpRequest()
+  xhttp.open("GET","http://localhost:3000/user/fetchsubcat/?c="+c,true)
+  xhttp.send()
+  
+  xhttp.onreadystatechange=function(){
+  	if(xhttp.status==200 && xhttp.readyState==4)
+  	{
+  	  
+  	  var sclist=JSON.parse(xhttp.responseText)	
+  	  var sclist_options="<option>select sub category</option>"
+  	  for(let i in sclist)
+  	  	sclist_options+=("<option>"+sclist[i].subcatnm+"</option>")
+  	  document.getElementById('response').innerHTML=sclist_options
+  	  	
+  	}
+  }
+  
+}
+
+</script>
+
+<div id="page">
+<center>
+<h1>Add Product Here!!!</h1>		
+<font color="orange"><%= output %></font>
+<form method="POST" action="/user/addproduct" enctype="multipart/form-data">
+				<table cellspacing="10">
+<tr>
+<td>Title</td>
+<td><input type="text" name="title"/></td>
+</tr>
+
+
+
+<tr>
+<td>Category</td>
+<td>
+<select onchange="fetchSubCat(this.value)" name='cat'>
+<option>select category</option>
+<% for(let i in clist) { %>
+<option><%= clist[i].catnm %></option>
+<% } %>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Sub Category</td>
+<td>
+<select id="response" name='subcat'>
+<option>select sub category</option>
+</select>
+</td>
+</tr>					
+
+
+
+
+					<tr>
+<td>Ads Description</td>
+<td>
+<textarea name='des'></textarea>
+</td>
+</tr>
+				<tr>
+<td>Upload Pic</td>
+<td>
+Ads Image1 : <input type='file' name='f1'/>
+<br/><br/> 
+Ads Image2 : <input type='file' name='f2'/>
+<br/><br/> 
+Ads Image3 : <input type='file' name='f3'/>
+<br/><br/> 
+</td>
+</tr>
+
+<tr>
+<td>Name</td>
+<td><input type="text" name="nm"/></td>
+</tr>
+
+<tr>
+<td>Phone</td>
+<td><input type="text" name="phone"/></td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td><input readonly type="text" name="email" value="<%= sunm %>"/></td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td><input type="text" name="price"/></td>
+</tr>
+
+<tr>
+<td>City</td>
+<td>
+<select name='city'>
+ <option>select city</option>
+ <option>Indore</option>
+ <option>Bhopal</option>
+ <option>Ujjain</option>
+</select>
+</td>
+</tr>
+
+
+					<tr>
+						
+					<td colspan="2">
+					<center>
+<input type="submit" value="Add Post"/>
+					</center>
+					</td>
+					</tr>
+				</table>
+				</form>
+
+
+</center>
+</div>
+<!-- page ends -->
+
+
+</div>
+<!-- wrapper ends -->
+
+
+
+<% include footer %>
+
+
