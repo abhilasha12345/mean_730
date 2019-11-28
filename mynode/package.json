@@ -1,0 +1,16 @@
+{
+  "name": "mynode_mean_730",
+  "version": "1.0.0",
+  "description": "this is my first node application ,we are working on configuration file",
+  "main": "add.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "meanbatch730",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "url": "^0.11.0",
+    "zlib": "^1.0.5"
+  }
+}

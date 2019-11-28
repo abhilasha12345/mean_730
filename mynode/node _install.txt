@@ -1,0 +1,197 @@
+sudo apt-get update
+sudo apt-get install nodejs
+nodejs -v
+
+sudo apt-get install curl
+
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+
+sudo apt-get install nodejs
+
+
+=>which node
+=>sudo apt-get remove nodejs
+=>sudo apt-get remove npm
+=>sudo apt-get update
+
+
+-----------------------------------------------------------
+
+Node.js is an open-source server side runtime environment built on Chrome's V8 JavaScript engine. It provides an event driven, non-blocking (asynchronous) I/O and cross-platform runtime environment for building highly scalable server-side application using JavaScript. 
+
+Node.js was written and introduced by Ryan Dahl in 2009.
+
+Node.js = Runtime Environment + JavaScript Library
+
+Features of Node.js
+1.Node.js is an open-source framework under MIT license. (MIT license is a free software license originating at the Massachusetts Institute of Technology (MIT).)
+2.Uses JavaScript to build entire server side application.
+3.Lightweight framework that includes bare minimum modules. Other modules can be included as per the need of an application.
+4.Asynchronous by default. So it performs faster than other frameworks.
+5.Cross-platform framework that runs on Windows, MAC or Linux
+
+
+----------------------------------------------------------------
+
+Node.js development environment can be setup in Windows, Mac, Linux and Solaris. The following tools/SDK are required for developing a Node.js application on any platform.
+
+Node.js
+Node Package Manager (NPM)
+IDE (Integrated Development Environment) or TextEditor
+---------------------------------------------------------------------
+
+
+Defaults to local:
+
+Node's JavaScript is different from browser's JavaScript when it comes to global scope. In the browser's JavaScript, variables declared without var keyword become global. In Node.js, everything becomes local by default.
+Access Global Scope:
+
+In a browser, global scope is the window object. In Node.js, global object represents the global scope.
+
+To add something in global scope, you need to export it using export or module.export. The same way, import modules/object using require() function to access it from the global scope. 
+
+
+------------------------------------------------------------------
+
+Module Nodejs
+Module in Node.js is a simple or complex functionality
+  organized in single or multiple JavaScript files which can be reused throughout the Node.js application.
+
+Each module in Node.js has its own context, so it cannot interfere with other modules or pollute global scope. Also, each module can be placed in a separate .js file under a separate folder. 
+
+
+Module Types:
+
+Node.js includes three types of modules:
+
+1.Core Modules
+2.Local Modules
+3.Third Party Modules
+
+
+
+------------------------------------
+Node.js Core Modules:
+
+Node.js is a light weight framework. The core modules include bare minimum functionalities of Node.js. These core modules are compiled into its binary distribution and load automatically when Node.js process starts. However, you need to import the core module first in order to use it in your application.
+
+The following table lists some of the important core modules in Node.js.
+Core Module 	Description
+
+http 	http module includes classes, methods and events to create Node.js http server.
+url 	url module includes methods for URL resolution and parsing.
+querystring 	querystring module includes methods to deal with query string.
+path 	path module includes methods to deal with file paths.
+fs 	fs module includes classes, methods, and events to work with file I/O.
+util 	util module includes utility functions useful for programmers. 
+
+
+Loading Core Modules:
+var module = require('module_name');
+--------------------------------------------------------------
+
+Node.js Local Module:
+
+Local modules are modules created locally in your Node.js application. These modules include different functionalities of your application in separate files and folders.
+You can also package it and distribute it via NPM, so that Node.js community can use it. 
+
+
+var log = {
+            info: function (info) { 
+                console.log('Info: ' + info);
+            },
+            warning:function (warning) { 
+                console.log('Warning: ' + warning);
+            },
+            error:function (error) { 
+                console.log('Error: ' + error);
+            }
+    };
+
+module.exports = log
+
+Loading Local Module:
+var myLogModule = require('./Log.js');
+myLogModule.info('Node.js started');
+---------------------------------
+
+Node Package Manager:
+
+Node Package Manager (NPM) is a command line tool that installs, updates or uninstalls Node.js packages in your application. It is also an online repository for open-source Node.js packages. The node community around the world creates useful modules and publishes them as packages in this repository. 
+
+
+
+-----------------------------------
+Install Package Locally:
+-> npm install <package name> 
+
+Install Package Globally:
+-> npm install <package name>  -g
+----------------------------------
+Add Dependency into package.json:
+npm install express --save 
+---------------------------------
+Update Package:
+ npm update <package name> 
+---------------------------------
+Uninstall Packages:
+npm uninstall <package name> 
+-------------------------------
+publish node packege on npm server
+---------------------
+Display npm username
+=>npm whoami
+-----------------------
+Display npm package list
+=>npm list -g
+-----------------------
+=> npm init
+=> npm publish
+=> npm unpublish @foldername/packagename -f
+=> npm unpublish @foldername/packagename -force
+---------------------------
+View registry info
+=>npm  view
+-------------------------------
+
+Node.js Web Server:
+
+
+
+
+---------------------------------
+
+Debug Node.js Application:
+
+ You can debug Node.js application using various tools including following:
+
+    Core Node.js debugger
+    Node Inspector
+    Built-in debugger in IDEs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
