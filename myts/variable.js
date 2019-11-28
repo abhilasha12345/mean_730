@@ -1,0 +1,15 @@
+var e;
+e = 100;
+console.log("e = " + e);
+var a;
+a = 100;
+console.log("a = " + a);
+var b;
+b = 'universal';
+console.log("b = " + b);
+var c;
+c = true;
+console.log("c = " + c);
+var d;
+d = 'hello';
+console.log("d = " + d);
